@@ -4,95 +4,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-image: url('https://i.pinimg.com/originals/55/ce/51/55ce511be59f50688ced046ab49d2a35.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .sidebar {
+            width: 300px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+            background-image: url('https://i.pinimg.com/736x/eb/1d/dc/eb1ddc04bac26d6b27b4476447449b8c.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(243, 234, 234, 0.7);
+            background-blend-mode: overlay;
+            backdrop-filter: blur(8px);
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .logo img {
+            max-width: 100%;
+        }
+
+        .navlinks {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: bold;
+        }
+
+        .navlinks a {
+            text-decoration: none;
+            color: #1a1a1a;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .navlinks a:hover {
+            background: rgba(0, 0, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        h1,
+        h2,
+        h5 {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                opacity: 0.6;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3" id="sidebar">
 
-                <ul class="navbar-nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">Home Page</a>
-                    </li>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="aot logo.png">
+        </div>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="notebooks.html">Virtual Notebooks</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="tasks.html">Tasks</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.html">Profile</a>
-                    </li>
-
-                    <li class="nav-item" id="logoutbtn">
-                        <a class="nav-link" href="index.html">Logout</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-9 p-4">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <h1 id="titletext">DASHBOARD</h1>
-                        <h5>Quarter Work Plan</h5>
-                    </div>
-
-                    <div class="col-lg-9">
-                        <h2>Attack On Titan Regiment Programs</h2>
-                        <h2><u>The Curriculum</u></h2>
-
-                        <br><br>
-
-                        <div class="container">
-                            <ol type="I">
-                                <li>
-                                    <span>Garrisson Regiment</span>
-                                    <ul>
-                                        <li>Artillery and Weapon Management</li>
-                                        <li>Wall and Security Defense</li>
-                                        <li>Omni-Directional Mobility (ODM) Gear Combat</li>
-                                    </ul>
-                                </li>
-
-                                <br>
-
-                                <li>
-                                    <span>Scout Regiment</span>
-                                    <ul>
-                                        <li>Omni-Directional Mobility (ODM) Gear Combat</li>
-                                        <li>Titan Biology & Theory</li>
-                                        <li>Field Maintenance</li>
-                                    </ul>
-                                </li>
-
-                                <br>
-
-                                <li>
-                                    <span>Military Police Regiment</span>
-                                    <ul>
-                                        <li>Firearms Training</li>
-                                        <li>Civil Administration</li>
-                                        <li>Royal Guard Protocols</li>
-                                    </ul>
-                                </li>
-
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="navlinks">
+            <a href="dashboard.html">DASHBOARD</a>
+            <a href="notebooks.html">VIRTUAL NOTEBOOKS</a>
+            <a href="profile.html">PROFILE</a>
+            <a href="tasks.html">TASKS</a>
+            <a href="index.html">LOG OUT</a>
         </div>
     </div>
 
-    <div class="footer">
-        Apelo, Bunag, Cunanan | 9-Emerald @2026
+    <div class="main-content">
+        <h1>DASHBOARD</h1>
+        <h5>Quarter Work Plan</h5>
+
+        <br>
+
+        <div class="card">
+            <h2>Attack On Titan Regiment Programs</h2>
+            <h4><u>The Curriculum</u></h4>
+
+            <br>
+
+            <ol type="I">
+                <li>
+                    <strong>Garrison Regiment</strong>
+                    <ul>
+                        <li>Artillery and Weapon Management</li>
+                        <li>Wall and Security Defense</li>
+                        <li>ODM Gear Combat</li>
+                    </ul>
+                </li>
+
+                <br>
+
+                <li>
+                    <strong>Scout Regiment</strong>
+                    <ul>
+                        <li>ODM Gear Combat</li>
+                        <li>Titan Biology & Theory</li>
+                        <li>Field Maintenance</li>
+                    </ul>
+                </li>
+
+                <br>
+
+                <li>
+                    <strong>Military Police Regiment</strong>
+                    <ul>
+                        <li>Firearms Training</li>
+                        <li>Civil Administration</li>
+                        <li>Royal Guard Protocols</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <br>
+
+        <div class="footer">
+            Apelo, Bunag, Cunanan | 9-Emerald @2026
+        </div>
     </div>
+
 </body>
 
 </html>
