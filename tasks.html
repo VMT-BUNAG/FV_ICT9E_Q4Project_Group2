@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Virtual Notebooks</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Verdana', sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-image: url('https://i.pinimg.com/originals/55/ce/51/55ce511be59f50688ced046ab49d2a35.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .sidebar {
+            width: 300px;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            flex-shrink: 0; 
+
+            background-image: url('https://i.pinimg.com/736x/eb/1d/dc/eb1ddc04bac26d6b27b4476447449b8c.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(243, 234, 234, 0.7);
+            background-blend-mode: overlay;
+            backdrop-filter: blur(8px);
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .navlinks {
+            font-weight: 600;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .navlinks a {
+            color: #1a1a1a;
+            text-decoration: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .navlinks a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            transform: translateX(5px);
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        h5 {
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                opacity: 0.5;
+            }
+            .main-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="logo">
+           <img src="aot logo.png" alt="Logo">
+        </div>
+
+        <div class="navlinks">
+            <a href="#">DASHBOARD</a>
+            <a href="notebooks.html">VIRTUAL NOTEBOOKS</a>
+            <a href="#">CLASSFEED</a>
+            <a href="#">CLASSFILE</a>
+            <a href="#">CALENDAR</a>
+            <a href="index.html">LOG OUT</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row g-5">
+
+                <div class="col-12">
+                    <div class="card" onclick="showAlert()">
+                        <img src="scout regiment.jpg" alt="Scout Regiment">
+                        <div class="card-body">
+                            <h5> SCOUT REGIMENT </h5>
+                            <p class="text-muted">
+                                The Scout Regiment (調査兵団 Chōsa Heidan) is the branch of the Eldian military most actively involved in direct Titan combat and study, human expansion, and outside exploration.
+                                <br><br>
+                                <strong>ARMIN ARLERT || アーミンアルレルト</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card" onclick="showAlert()">
+                        <img src="garrison regiment.jpg" alt="Garrison Regiment">
+                        <div class="card-body">
+                            <h5> GARRISON REGIMENT </h5>
+                            <p class="text-muted">
+                                The Garrison Regiment (駐屯兵団 Chūton Heidan) is the largest of the Military divisions which protects and maintains order within the Walls.
+                                <br><br>
+                                <strong>DOT PYXIS || ドットピクシス</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="card" onclick="showAlert()">
+                        <img src="military police regiment.jpg" alt="Military Police">
+                        <div class="card-body">
+                            <h5> MILITARY POLICE REGIMENT</h5>
+                            <p class="text-muted">
+                                The Military Police Regiment (憲兵団 Kenpeidan) is the most prestigious military sector due to their work, which allows citizens to live safely within the inner Wall.
+                                <br><br>
+                                <strong>NILE DAWK || ナイルダウク</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert("This regiment cannot be accessible. Try again later.");
+        }
+    </script>
+
+</body>
+</html>
